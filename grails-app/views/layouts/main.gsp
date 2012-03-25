@@ -1,7 +1,7 @@
 <!doctype html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title><g:layoutTitle default="Grails"/></title>
+    <title><g:layoutTitle default="Jonna & Christian"/></title>
     <g:layoutHead/>
     <r:require modules="bootstrap"/>
     <r:layoutResources/>
@@ -29,6 +29,22 @@
 
     #login:hover {
         cursor: pointer;
+    }
+
+    .loginlogout {
+        border-top: 1px solid white;
+        font-size: smaller;
+    }
+
+    .selectedLang {
+        border-width: 2px 2px 0 2px;
+        border-color: #fa63f6;
+        border-style: solid;
+    }
+
+    .nav > li > a:hover {
+        text-decoration: none;
+        background-color: #eeeeee;
     }
     </style>
 
@@ -58,6 +74,7 @@
             })
         })
 
+
     </script>
 </head>
 
@@ -71,20 +88,33 @@
         <div class="span2">
             <div class="well sidebar-nav">
                 <g:each in="${grailsApplication.config.languages}" var="language">
-                    <g:link controller="translate" action="changeLang" id="${language.locale.country}" class="changeLang"><g:img dir="images/flags" file="${language.locale.country}.png"/></g:link>
+                    <g:if test="${session['org.springframework.web.servlet.i18n.SessionLocaleResolver.LOCALE'] == language.locale}">
+                        <g:link controller="translate" action="changeLang" id="${language.locale.country}" class="changeLang"><span><g:img class="selectedLang" dir="images/flags"
+                                                                                                                                           file="${language.locale.country}.png"/></span></g:link>
+                    </g:if>
+                    <g:else>
+                        <g:link controller="translate" action="changeLang" id="${language.locale.country}" class="changeLang"><g:img dir="images/flags" file="${language.locale.country}.png"/></g:link>
+                    </g:else>
                 </g:each>
                 <ul class="nav nav-list">
-                    <li class="active">
-                        <a href="#" class="btn-danger">Home</a>
-                    </li>
-                    <li><a href="#">Places</a></li>
-                    <li><a href="#">Timetable</a></li>
+                    <g:mainmenuentry name="home" label="Home"/>
+                    <g:mainmenuentry name="weddingofficials" label="Wedding 'Officials'"/>
+                    <g:mainmenuentry name="places" label="Places"/>
+                    <g:mainmenuentry name="timetable" label="Timetable"/>
+                    <g:mainmenuentry name="guests" label="Guests"/>
+                    <g:mainmenuentry name="wishlist" label="Wish list"/>
+                    <g:mainmenuentry name="speeches" label="Speeches"/>
+                    <g:mainmenuentry name="dresscode" label="Dress code"/>
                 </ul>
                 <sec:ifLoggedIn>
-                    Logged in as <sec:username/> (<g:link controller='logout'>Logout</g:link>)
+                    <div id="login" class="loginlogout">Logged in as <sec:username/> (<g:link controller='logout'>Logout</g:link>)</div>
+                    <ul class="nav nav-list">
+                        <g:mainmenuentry name="translations" label="Translations"/>
+                    </ul>
+
                 </sec:ifLoggedIn>
                 <sec:ifNotLoggedIn>
-                    <span id="login"><i class="icon-lock"></i>Login</span>
+                    <div id="login" class="loginlogout">Login</div>
                     <g:if test='${flash.message}'>
                         <div class='login_message'>${flash.message}</div>
                     </g:if>

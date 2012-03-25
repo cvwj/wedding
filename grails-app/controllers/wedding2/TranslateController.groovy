@@ -36,6 +36,14 @@ class TranslateController {
 
     }
 
+    @Secured(['ROLE_ADMIN'])
+    def showTranslations = {
+
+        def messages = Message.list([sort: "code"])
+        render view: "translations", model: [messages: messages]
+    }
+
+
     def changeLang = {
         def locale = grailsApplication.config.languages.collect{it.locale}.find {it.country == params.id}
         if (grailsApplication.config.languages.collect{it.locale}.contains(locale))

@@ -49,19 +49,19 @@
 <script type="text/javascript">
 
     function handleSuccess(data) {
-//        var responseText = data.responseText || '[]';
         var json = eval(data);
         if (json.success) {
             $('#login').html('Logged in as ' + json.username +
                     ' (<%=link(controller: 'logout') { 'Logout' }%>)');
-            $('#logindialog').hide()
+            location.reload()
         }
         else if (json.error) {
-            $('#loginMessage').html( "<span class='errorMessage'>" +
-                    json.error + '</error>');
+            $('#loginMessage').html( "<span class='label label-important'>" +
+                    json.error + '</span>');
         }
         else {
-            $('#loginMessage').html(data);
+            $('#loginMessage').html( "<span class='label label-important'>" +
+                    data + '</span>');
         }
     }
     ;

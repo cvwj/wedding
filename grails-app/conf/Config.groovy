@@ -38,10 +38,9 @@ grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
 
 language.danish = new Language(languageNameEnglish: "Danish", languageNameLocal: "Dansk", locale: new Locale("da", "DK"))
 language.finish = new Language(languageNameEnglish: "Finish", languageNameLocal: "Suomi", locale: new Locale("fi", "FI"))
-language.swedish = new Language(languageNameEnglish: "Swedish", languageNameLocal: "Svenska", locale: new Locale("sv", "SE"))
 language.english = new Language(languageNameEnglish: "English", languageNameLocal: "English", locale: new Locale("en", "GB"))
-language.default = language.swedish
-languages = [language.danish, language.finish, language.swedish, language.english]
+language.default = language.danish
+languages = [language.danish, language.finish, language.english]
 
 
 // The default codec used to encode data with ${}
