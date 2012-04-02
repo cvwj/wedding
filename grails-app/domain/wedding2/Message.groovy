@@ -9,4 +9,9 @@ class Message {
         cache true
     }
 
+    static constraints = {
+        locale( nullable: true)
+        text( nullable: true, maxSize: 65535)
+    }
+
 }

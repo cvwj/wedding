@@ -13,10 +13,8 @@
 <body>
 <div class="row">
     <div class="span6">
-        <h1><g:translatable code="frontpage.welcome.header">Velkommen til vores Bryllup</g:translatable></h1>
-
-        <p>
-            <g:translatable code="frontpage.welcome.body">
+            <g:translatable code="frontpage.welcome">
+                <h1>Velkommen til vores Bryllup</h1>
                 <p>Vi byder Jer velkomne til vores bryllup, og vi glæder os til at fejre denne specielle dag sammen med Jer.</p> 
                 <p>På dette bryllupssite finder du alle de oplysninger, du skal bruge for at være sikker på at komme til den rigtige kirke på det rigtige tidspunkt osv.</p>
                 <h3>Vi elsker børn, men...</h3>
@@ -38,11 +36,7 @@
                 <p>
                     Brug derfor lidt tid på at orientere dig her på sitet - oplyningerne står der sandsynligvis et sted.
                 </p>
-
-
             </g:translatable>
-
-        </p>
     </div>
 
     <div class="span4">

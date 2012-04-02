@@ -29,13 +29,13 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
-        mavenRepo "http://oss.sonatype.org/content/repositories/snapshots"
+        mavenRepo "http://oss.sonatype.org/content/repositories/releases"
     }
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 
-        // runtime 'mysql:mysql-connector-java:5.1.16'
-        runtime 'org.elasticsearch:elasticsearch:0.19.0-SNAPSHOT'
+        runtime 'mysql:mysql-connector-java:5.1.16'
+        runtime 'org.elasticsearch:elasticsearch:0.19.1'
     }
 
     plugins {

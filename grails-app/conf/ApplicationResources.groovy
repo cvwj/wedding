@@ -10,4 +10,11 @@ modules = {
         resource url: 'js/jquery.tablesorter.js'
         dependsOn 'tablesorter-css'
     }
+    'ckeditor-adaptor' {
+        resource url: 'ckeditor/adapters/jquery.js'
+        dependsOn 'ckeditor'
+    }
+    'ckeditor' {
+        resource url: 'ckeditor/ckeditor.js'
+    }
 }

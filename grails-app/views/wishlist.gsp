@@ -3,22 +3,12 @@
 <head>
     <meta name="layout" content="main"/>
 
-    <style>
-    .timetable-time {
-        width: 20%;
-    }
-
-    .timetable-desc {
-        width: 80%;
-    }
-    </style>
 </head>
 
 <body>
-<h1><g:translatable code="wishlist.welcome.header">Vores ønskeliste</g:translatable></h1>
+<g:translatable code="wishlist.welcome">
+    <h1>Vores ønskeliste</h1>
 
-<p>
-<g:translatable code="wishlist.welcome.body">
     <p>
         Åh, hvad skal man ønske sig? Vi har jo faktisk næsten alt hvad vi har brug for. Og så er der det med at vi holder bryllup i Finland, men bor i Danmark.
         Det giver nogle udfordringer med at transportere tingene hjem.
@@ -43,6 +33,5 @@
 
     </p>
 </g:translatable>
-</p>
 </body>
 </html>

@@ -3,9 +3,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><g:layoutTitle default="Jonna & Christian"/></title>
     <g:layoutHead/>
-    <r:require modules="bootstrap"/>
+    <r:require modules="bootstrap, ckeditor-adaptor"/>
     <r:layoutResources/>
     <style>
+    body, p, li {
+        color: #808080;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #b94a48;
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
     #logo {
         background: url("<g:resource dir='images' file='img03.jpg'/>") repeat-x;
         height: 220px;
@@ -49,6 +59,7 @@
     </style>
 
     <script type="text/javascript">
+        var CKEDITOR_BASEPATH = '${g.resource(dir: "ckeditor")}/';
         var dialog
         var logindialog
         $(function () {
@@ -89,11 +100,12 @@
             <div class="well sidebar-nav">
                 <g:each in="${grailsApplication.config.languages}" var="language">
                     <g:if test="${session['org.springframework.web.servlet.i18n.SessionLocaleResolver.LOCALE'] == language.locale}">
-                        <g:link controller="translate" action="changeLang" id="${language.locale.country}" class="changeLang"><span><g:img class="selectedLang" dir="images/flags"
-                                                                                                                                           file="${language.locale.country}.png"/></span></g:link>
+                        <g:link controller="translate" action="changeLang" id="${language.locale.country}" class="changeLang">
+                            <img class="selectedLang" src="<g:resource dir='images' file='flags/${language.locale.country}.png'/>">
+                        </g:link>
                     </g:if>
                     <g:else>
-                        <g:link controller="translate" action="changeLang" id="${language.locale.country}" class="changeLang"><g:img dir="images/flags" file="${language.locale.country}.png"/></g:link>
+                        <g:link controller="translate" action="changeLang" id="${language.locale.country}" class="changeLang"><img src="<g:resource dir='images' file='flags/${language.locale.country}.png'/>"></g:link>
                     </g:else>
                 </g:each>
                 <ul class="nav nav-list">

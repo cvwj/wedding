@@ -8,7 +8,7 @@ class TranslateController {
     @Secured(['ROLE_ADMIN'])
     def showMessageEditor = {
         def messages = Message.findAllByCode(params.code, [sort: "locale"])
-        render view: "messageEditor", model: [code: params.code, languages: grailsApplication.config.languages, messages: messages]
+        render view: "messageEditor", model: [code: params.code, languages: grailsApplication.config.languages, messages: messages, currentLocale: session['org.springframework.web.servlet.i18n.SessionLocaleResolver.LOCALE']]
     }
 
     @Secured(['ROLE_ADMIN'])
@@ -40,7 +40,7 @@ class TranslateController {
     def showTranslations = {
 
         def messages = Message.list([sort: "code"])
-        render view: "translations", model: [messages: messages]
+        render view: "translations", model: [messages: messages, currentLocale: session['org.springframework.web.servlet.i18n.SessionLocaleResolver.LOCALE']]
     }
 
 
@@ -51,7 +51,7 @@ class TranslateController {
             session['org.springframework.web.servlet.i18n.SessionLocaleResolver.LOCALE'] = locale
             log.debug "Changed language to $locale"
         }
-        render view: "../index"
+        redirect uri: "/"
     }
 
 }

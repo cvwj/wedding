@@ -9,7 +9,7 @@ class MessageTranslationTagLib {
         attrs, body ->
         def message = g.message attrs
         final bodytext = body()
-        if (message && message.equals(attrs.code) && bodytext)
+        if (message.equals(attrs.code))
         {
             message = bodytext
         }
