@@ -5,14 +5,14 @@
 
     <style>
     .portrait {
-        float: right;
+        /*float: right;*/
     }
     </style>
 </head>
 
 <body>
-<div class="row">
-    <div class="span6">
+<div class="row-fluid">
+    <div class="span7">
             <g:translatable code="frontpage.welcome">
                 <h1>Velkommen til vores Bryllup</h1>
                 <p>Vi byder Jer velkomne til vores bryllup, og vi glæder os til at fejre denne specielle dag sammen med Jer.</p> 
@@ -39,12 +39,10 @@
             </g:translatable>
     </div>
 
-    <div class="span4">
-        <div class="well portrait">
+    <div class="span3">
             <object><param name="movie" value="http://www.youtube.com/v/iyRV_DZ_4Ho?version=3&feature=player_detailpage&modestbranding=1"><param name="allowFullScreen" value="false"><param
                     name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/iyRV_DZ_4Ho?version=3&feature=player_detailpage" type="application/x-shockwave-flash"
                                                                    allowfullscreen="true" allowScriptAccess="always"></object>
-        </div>
     </div>
 </div>
 </body>

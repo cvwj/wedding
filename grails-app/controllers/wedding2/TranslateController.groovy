@@ -54,4 +54,10 @@ class TranslateController {
         redirect uri: "/"
     }
 
+    @Secured(['ROLE_ADMIN'])
+    def toggleTranslations = {
+        session.showTranslations = !session.showTranslations
+        redirect uri: "/"
+    }
+
 }

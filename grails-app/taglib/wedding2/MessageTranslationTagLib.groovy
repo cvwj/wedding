@@ -15,7 +15,7 @@ class MessageTranslationTagLib {
         }
 
 
-        if (springSecurityService.isLoggedIn())
+        if (session.showTranslations)
         {
             out << "<i code='${attrs.code}' class='icon-pencil'></i><span id='${attrs.code.replaceAll("\\.", "")}' class='translatable'>$message</span>"
         }
