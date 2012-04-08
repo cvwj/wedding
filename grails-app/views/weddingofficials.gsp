@@ -39,6 +39,21 @@
         </g:translatable>
     </div>
 </div>
+<div class="row">
+    <div class="span2">
+        <div class="well">
+            <img src="<g:resource dir='images' file='Karin.facebook.jpg'/>">
+        </div>
+
+    </div>
+
+    <div class="span6">
+        <g:translatable code="weddingofficials.masterofceremony">
+
+
+        </g:translatable>
+    </div>
+</div>
 
 <div class="row">
     <div class="span2">
