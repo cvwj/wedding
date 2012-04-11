@@ -27,12 +27,6 @@ environments {
             }
         }
     }
-    test {
-        dataSource {
-            dbCreate = "update"
-            url = "jdbc:h2:mem:testDb;MVCC=TRUE"
-        }
-    }
     production {
         dataSource {
             jndiName = "java:comp/env/jdbc/wedding"

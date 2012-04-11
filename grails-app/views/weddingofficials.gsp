@@ -48,7 +48,7 @@
     </div>
 
     <div class="span6">
-        <g:translatable code="weddingofficials.masterofceremony">
+        <g:translatable code="weddingofficials.karin">
 
 
         </g:translatable>
@@ -58,7 +58,7 @@
 <div class="row">
     <div class="span2">
         <div class="well">
-            <img src="<g:resource dir='images' file='Frederik_Schmidt.jpg'/>">
+            <img src="<g:resource dir='images' file='Frederik_illulisat.jpg'/>">
         </div>
 
     </div>
@@ -75,7 +75,7 @@ Frederik kender ALT til etikette og traditioner, og vil føre Christian sikkert 
 <div class="row">
     <div class="span2">
         <div class="well">
-            %{--<img src="<g:resource dir='images' file='Frederik_Schmidt.jpg'/>">--}%
+            <img src="<g:resource dir='images' file='anina.facebook.jpg'/>">
         </div>
 
     </div>
