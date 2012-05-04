@@ -107,7 +107,7 @@ Frederik kender ALT til etikette og traditioner, og vil føre Christian sikkert 
 <div class="row">
     <div class="span2">
         <div class="well">
-            <img src="<g:resource dir='images' file='vappu_facebook_2009.png'/>">
+            <img src="<g:resource dir='images' file='vappu_facebook_2009.jpg'/>">
         </div>
 
     </div>
@@ -152,7 +152,7 @@ Frederik kender ALT til etikette og traditioner, og vil føre Christian sikkert 
 <div class="row">
     <div class="span2">
         <div class="well">
-            %{--<img src="<g:resource dir='images' file='Frederik_Schmidt.jpg'/>">--}%
+            <img src="<g:resource dir='images' file='ronja.jpg'/>">
         </div>
     </div>
 
@@ -181,7 +181,7 @@ Frederik kender ALT til etikette og traditioner, og vil føre Christian sikkert 
 <div class="row">
     <div class="span2">
         <div class="well">
-            %{--<img src="<g:resource dir='images' file='Frederik_Schmidt.jpg'/>">--}%
+            <img src="<g:resource dir='images' file='freja.jpg'/>">
         </div>
 
     </div>
