@@ -13,11 +13,11 @@
 <body>
 <div class="row-fluid">
     <div class="span7">
-            <g:translatable code="frontpage.welcome">
+		<div class="well">
+			<img src="<g:resource dir='images' file='wedding_portrait.jpg'/>">
+		</div>
+		<g:translatable code="frontpage.welcome">
                 <h1>Velkommen til vores Bryllup</h1>
-				<div class="well">
-					<img src="<g:resource dir='images' file='wedding_portrait.jpg'/>">
-				</div>
                 <p>Vi byder Jer velkomne til vores bryllup, og vi glæder os til at fejre denne specielle dag sammen med Jer.</p>
                 <p>På dette bryllupssite finder du alle de oplysninger, du skal bruge for at være sikker på at komme til den rigtige kirke på det rigtige tidspunkt osv.</p>
                 <h3>Vi elsker børn, men...</h3>
