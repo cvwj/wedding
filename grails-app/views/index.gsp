@@ -40,9 +40,10 @@
     </div>
 
     <div class="span3">
-            <object><param name="movie" value="http://www.youtube.com/v/iyRV_DZ_4Ho?version=3&feature=player_detailpage&modestbranding=1"><param name="allowFullScreen" value="false"><param
-                    name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/iyRV_DZ_4Ho?version=3&feature=player_detailpage" type="application/x-shockwave-flash"
-                                                                   allowfullscreen="true" allowScriptAccess="always"></object>
+		<div class="well">
+			<img src="<g:resource dir='images' file='jonna_and_christian.jpg'/>">
+		</div>
+
     </div>
 </div>
 </body>
